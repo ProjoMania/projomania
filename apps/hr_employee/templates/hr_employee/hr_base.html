@@ -1,0 +1,10 @@
+{% extends "base/base.html" %}
+
+
+{% block left_sidebar %}
+    <ul class="list-unstyled">
+        <li><strong>Employees</strong></li>
+        <li><a href="{% url 'hr_employee:employees' %}">Employee</a></li>
+        <li><a href="{% url 'hr_employee:departments' %}">Departments</a></li>
+    </ul>
+{% endblock %}
