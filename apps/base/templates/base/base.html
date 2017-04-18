@@ -15,16 +15,14 @@
             aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#" style="color:white;"><h3>PorjoMania</h3></a>
+    <a class="navbar-brand" href="{% url 'base:main' %}" style="color:white;"><h3>PorjoMania</h3></a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            {#      <li class="nav-item">#}
-            {#        <a class="nav-link" href="#">Home</a>#}
-            {#      </li>#}
-
             {% block main_menu %}
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'hr_employee:main' %}">Human Resources</a>
+                </li>
             {% endblock main_menu %}
         </ul>
 
