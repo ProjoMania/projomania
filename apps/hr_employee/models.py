@@ -20,5 +20,6 @@ class Department(models.Model):
     def __str__(self):
         return self.name
 
-
+# The model Employee uses Department, but the definition of the Department is after the Employee.
+# The following line is a work-around solution to add the field (relation) after declaring the Department.
 Employee.department = models.ForeignKey(Department, )
