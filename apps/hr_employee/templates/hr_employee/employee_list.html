@@ -2,9 +2,21 @@
 
 {% block main_content %}
     Hello Employees
+    <table class="table table-responsive">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for employee in employee_list %}
+            <tr>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.department.name }}</td>
+            </tr>
+        {% endfor %}
 
-    {% for employee in employee_list %}
-        {{ employee }}
-    {% endfor %}
-
+        </tbody>
+    </table>
 {% endblock %}
