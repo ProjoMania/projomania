@@ -23,8 +23,7 @@ class EmployeeInline(admin.TabularInline):
 class DepartmentAdmin(admin.ModelAdmin):
     list_display = ['name', 'manager']
     fieldsets = [
-        (None, {'fields': ['name']}),
-        ('More...', {'fields':['manager', ], 'classes':['collapse']})
-    ]
+        (None, {'fields': ['name', 'manager']}),
+        ]
 
 admin.site.register(Department, DepartmentAdmin)
