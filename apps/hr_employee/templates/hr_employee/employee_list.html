@@ -6,6 +6,9 @@
         <thead>
         <tr>
             <th>Name</th>
+            <th>Work Phone</th>
+            <th>Work Email</th>
+            <th>Name</th>
             <th>Department</th>
         </tr>
         </thead>
@@ -13,6 +16,8 @@
         {% for employee in employee_list %}
             <tr>
                 <td>{{ employee.name }}</td>
+                <td>{{ employee.work_phone }}</td>
+                <td>{{ employee.work_email }}</td>
                 <td>{{ employee.department.name }}</td>
             </tr>
         {% endfor %}
