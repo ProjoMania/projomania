@@ -1,6 +1,10 @@
 {% extends 'hr_employee/hr_base.html' %}
-{{ employee }}
+
+{% block main_content %}
 <form action="{% url 'hr_employee:employees_create' %}" method="post">{% csrf_token %}
-    {{ object.as_p }}
+    <tr><th>Your name:</th><td><input type="text" name="name" required /></td></tr>
+<tr><th>Your website:</th><td><input type="text" name="work_phone" required /></td></tr>
+<tr><th>Comment:</th><td><input type="text" name="work_mobile" required /></td></tr>
     <input type="submit" value="Save" />
 </form>
+{% endblock %}
