@@ -1,0 +1,6 @@
+{% extends 'hr_employee/hr_base.html' %}
+{{ employee }}
+<form action="{% url 'hr_employee:employees_create' %}" method="post">{% csrf_token %}
+    {{ object.as_p }}
+    <input type="submit" value="Save" />
+</form>
