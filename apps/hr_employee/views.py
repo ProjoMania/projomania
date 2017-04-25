@@ -16,3 +16,7 @@ class EmployeeIndexView(generic.ListView):
 # Departments
 class DepartmentIndexView(generic.ListView):
     model = Department
+
+
+class DepartmentDetailView(generic.DetailView):
+    model = Department
